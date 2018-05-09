@@ -1,0 +1,21 @@
+<html>
+<head><title>404 Not Found</title></head>
+<body bgcolor="white">
+<center><h1>404 Not Found</h1></center>
+<hr><center>nginx/1.9.13</center>
+    <script>   
+    var i = 50;  //这里是倒计时的秒数  
+    var intervalid;   
+    intervalid = setInterval("cutdown()", 1000);   
+    function cutdown() {   
+        if (i == 0) {   
+            window.location.href = "https://patrick233.gitee.io/naive/"; //倒计时完成后跳转的地址  
+            clearInterval(intervalid);   
+        }   
+        document.getElementById("mes").innerHTML = i;   
+        i--;   
+    }  
+    window.onload = cutdown;  
+    </script>
+</body>
+</html>
