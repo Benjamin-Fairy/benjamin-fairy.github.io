@@ -1,14 +1,31 @@
+<!doctype html>
+<html lang="zh">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>进度指示器 - 彩色圆形</title>
-  <link rel="stylesheet" href="//mdui-aliyun.cdn.w3cbus.com/source/dist/css/mdui.min.css"/>
+
+
 </head>
 <body>
+	
+    <div id="indicatorContainer"></div>
+    <div id="memory"></div>
+    <script type="text/javascript"  src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/radialindicator.js"></script>
+    <script type="text/javascript">
+radialIndicator.defaults.initValue = 100; //指示器赤初始值
+var memoryjs = $('#memory').radialIndicator({
+         barWidth: 10,
+        radius:200,
+        roundCorner: true,
+        percentage: true,
+        barColor: {
+            0: '#33CC33',
+            33: '#37BC9B ',
+            66: '#23B7E5',
+            100: '#FF0000'},percentage: true}).data('radialIndicator');      
+    //Using Instance
+    memoryjs.animate(5);
 
-<div class="mdui-container mdui-p-t-5">
-  <div class="mdui-spinner mdui-spinner-colorful"></div>
-</div>
+    </script>
 
-<script src="//mdui-aliyun.cdn.w3cbus.com/source/dist/js/mdui.min.js"></script>
 </body>
+</html>
